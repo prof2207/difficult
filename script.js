@@ -1,23 +1,74 @@
-let num = 266219;
-let numStr = String(num);
-let arr = Array.from(numStr);
-let i = 0;
-let mult = 1;
-while (i < arr.length) {
-    mult = mult * arr[i];
-    i++;
+'use strict';
+
+// Вариант A
+
+let lang = prompt("выберите язык 'ru' или 'en'", "ru");
+let ru = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+let en = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+if (lang == "ru") {
+    alert(ru);
+} else if (lang == "en") {
+    alert(en);
+} else {
+    alert("Попробуйте ещё раз");
 }
-console.log(mult);
-
-// пункты 1-2 задания
-
-let mult3 = mult **= 3;
-console.log(mult3);
 
 
-// пункт з задания
 
-let multStr = String(mult3);
-console.log(multStr.substring(0, 2));
+
+
+// Вариант B
+
+// let lang = prompt("выберите язык 'ru' или 'en'", "ru");
+// let ru = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+// let en = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+// switch (lang) {
+//     case "ru":
+//         alert(ru);
+//         break;
+//     case "en":
+//         alert(en);
+//         break;
+//     default:
+//         alert("Попробуйте ещё раз");
+// }
+
+
+
+
+
+
+// Вариант С
+
+// let lang2 = [
+//     ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
+//     ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+// ];
+// let lang = prompt("выберите язык 'ru' или 'en'", "ru");
+// let day = (lang == "ru") ? [lang2[0]] :
+//     (lang == "en") ? [lang2[1]] :
+//         "Попробуйте ещё раз";
+// alert(day);
+
+
+
+
+
+
+// Вариант D
+
+// let lang = prompt("выберите язык 'ru' или 'en'", "ru");
+// let day = (lang == "ru") ? ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"] :
+//     (lang == "en") ? ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] :
+//         "Попробуйте ещё раз";
+// alert(day);
+
+
+let user = prompt("Имя пользователя", "Введите имя");
+let namePerson = (user === "Артем") ? 'директор' :
+    (user === "Александр") ? 'преподаватель' :
+        'студент';
+console.log(namePerson);
+
 
 
