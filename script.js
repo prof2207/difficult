@@ -11,8 +11,9 @@ console.log(mult);
 
 // пункты 1-2 задания
 
-let mult3 = mult ** 3;
+let mult3 = mult **= 3;
 console.log(mult3);
+
 
 // пункт з задания
 
