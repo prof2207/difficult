@@ -1,74 +1,33 @@
 'use strict';
 
-// Вариант A
+let week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', '<i>Суббота<i/>', '<i>Воскресенье<i/>'];
 
-let lang = prompt("выберите язык 'ru' или 'en'", "ru");
-let ru = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
-let en = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-if (lang == "ru") {
-    alert(ru);
-} else if (lang == "en") {
-    alert(en);
-} else {
-    alert("Попробуйте ещё раз");
+let now = new Date();
+if ((String(now)).slice(0, 3) === "Mon") {
+    week.splice(0, 1, "<b>Понедельник</b>");
+} else if ((String(now)).slice(0, 3) === "Tue") {
+    week.splice(1, 1, "<b>Вторник</b>");
+} else if ((String(now)).slice(0, 3) === "Wed") {
+    week.splice(2, 1, "<b>Среда</b>");
+} else if ((String(now)).slice(0, 3) === "Thu") {
+    week.splice(3, 1, "<b>Четверг</b>");
+} else if ((String(now)).slice(0, 3) === "Fri") {
+    week.splice(4, 1, "<b>Пятница</b>");
+} else if ((String(now)).slice(0, 3) === "Sat") {
+    week.splice(5, 1, "<b><i>Суббота<i/></b>");
+} else if ((String(now)).slice(0, 3) === "Sun") {
+    week.splice(6, 1, "<b><i>Воскресенье<i/></b>");
 }
+let outArr = document.getElementById('outArr');
+let str = ' ';
+for (let i = 0; i < week.length; i++) {
+    if (week[i] !== undefined) str = str + week[i] + '<br>';
+}
+outArr.innerHTML = str;
+
+console.log(String(now).slice(0, 3));
 
 
-
-
-
-// Вариант B
-
-// let lang = prompt("выберите язык 'ru' или 'en'", "ru");
-// let ru = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
-// let en = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-// switch (lang) {
-//     case "ru":
-//         alert(ru);
-//         break;
-//     case "en":
-//         alert(en);
-//         break;
-//     default:
-//         alert("Попробуйте ещё раз");
-// }
-
-
-
-
-
-
-// Вариант С
-
-// let lang2 = [
-//     ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
-//     ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-// ];
-// let lang = prompt("выберите язык 'ru' или 'en'", "ru");
-// let day = (lang == "ru") ? [lang2[0]] :
-//     (lang == "en") ? [lang2[1]] :
-//         "Попробуйте ещё раз";
-// alert(day);
-
-
-
-
-
-
-// Вариант D
-
-// let lang = prompt("выберите язык 'ru' или 'en'", "ru");
-// let day = (lang == "ru") ? ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"] :
-//     (lang == "en") ? ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] :
-//         "Попробуйте ещё раз";
-// alert(day);
-
-
-let user = prompt("Имя пользователя", "Введите имя");
-let namePerson = (user === "Артем") ? 'директор' :
-    (user === "Александр") ? 'преподаватель' :
-        'студент';
-console.log(namePerson);
 
 
 
