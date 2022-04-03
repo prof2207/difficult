@@ -25,6 +25,9 @@ for (let i = 0; i < week.length; i++) {
 }
 outArr.innerHTML = str;
 
+
+
+
 console.log(String(now).slice(0, 3));
 
 
